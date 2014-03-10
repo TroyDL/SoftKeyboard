@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 22.3">
+
+    <issue
+        id="WrongCall"
+        severity="Fatal"
+        message="Suspicious method call; should probably call &quot;draw&quot; rather than &quot;onDraw&quot;"
+        category="Correctness"
+        priority="6"
+        summary="Finds cases where the wrong call is made, such as calling `onMeasure` instead of `measure`"
+        explanation="Custom views typically need to call `measure()` on their children, not `onMeasure`. Ditto for onDraw, onLayout, etc."
+        errorLine1="        onDraw(null);"
+        errorLine2="        ~~~~~~">
+        <location
+            file="C:\Users\TroyD_000\AndroidStudioProjects\SoftKeyboard\app\src\main\java\com\example\android\softkeyboard\CandidateView.java"
+            line="249"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="WrongCall"
+        severity="Fatal"
+        message="Suspicious method call; should probably call &quot;draw&quot; rather than &quot;onDraw&quot;"
+        category="Correctness"
+        priority="6"
+        summary="Finds cases where the wrong call is made, such as calling `onMeasure` instead of `measure`"
+        explanation="Custom views typically need to call `measure()` on their children, not `onMeasure`. Ditto for onDraw, onLayout, etc."
+        errorLine1="        onDraw(null);"
+        errorLine2="        ~~~~~~">
+        <location
+            file="C:\Users\TroyD_000\AndroidStudioProjects\SoftKeyboard\app\src\main\java\com\example\android\softkeyboard\CandidateView.java"
+            line="310"
+            column="9"/>
+    </issue>
+
+</issues>
