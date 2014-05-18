@@ -2,20 +2,47 @@
 
 <Keyboard
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:keyWidth="10%p"
+    android:keyWidth="30%p"
     android:horizontalGap="0px"
     android:verticalGap="0px"
-    android:keyHeight="30dip" >
+    android:keyHeight="40dip" >
     <Row android:rowEdgeFlags="top|bottom" >
         <Key
-            android:codes="46"
-            android:keyLabel="."
-            android:keyEdgeFlags="left" />
+            android:keyWidth="20%p"
+            android:keyOutputText="I'll be home in 5 minutes."
+            android:keyLabel="I'll be home in 5 minutes." />
         <Key
-            android:codes="44"
-            android:keyLabel=","
-            android:keyEdgeFlags="right" />
-        <Key android:keyOutputText="test" android:keyLabel="test"
-            android:keyWidth="10%p"/>
+            android:keyOutputText="Are we doing anything tonight?"
+            android:keyLabel="Are we doing anything tonight?" />
+        <Key
+            android:keyWidth="40%p"
+            android:keyOutputText="When do you think you'll be home?"
+            android:keyLabel="When do you think you'll be home?" />
+    </Row>
+    <Row>
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="I'll be home in 10 minutes."
+            android:keyLabel="I'll be home in 10 minutes." />
+        <Key
+            android:keyOutputText="Are we doing anything tomorrow?"
+            android:keyLabel="Are we doing anything tomorrow?" />
+        <Key
+            android:keyWidth="40%p"
+            android:keyOutputText="Would you like anything from the store?"
+            android:keyLabel="Would you like anything from the store?" />
+    </Row>
+    <Row>
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="I'll be home in 15 minutes."
+            android:keyLabel="I'll be home in 15 minutes." />
+        <Key
+            android:keyOutputText="Are we doing anything this weekend?"
+            android:keyLabel="Are we doing anything this weekend?" />
+        <Key
+            android:keyWidth="40%p"
+            android:keyOutputText="Are you stopping at the store on your way home?"
+            android:keyLabel="Are you stopping at the store on your way home?" />
     </Row>
 </Keyboard>

@@ -2,20 +2,47 @@
 
 <Keyboard
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:keyWidth="10%p"
+    android:keyWidth="30%p"
     android:horizontalGap="0px"
     android:verticalGap="0px"
-    android:keyHeight="30dip" >
-    <Row android:rowEdgeFlags="top|bottom" >
+    android:keyHeight="40dip" >
+    <Row android:rowEdgeFlags="top" >
         <Key
-            android:codes="46"
-            android:keyLabel="."
-            android:keyEdgeFlags="left" />
+            android:keyWidth="20%p"
+            android:keyOutputText="git status\n"
+            android:keyLabel="Status" />
         <Key
-            android:codes="44"
-            android:keyLabel=","
-            android:keyEdgeFlags="right" />
-        <Key android:keyOutputText="test" android:keyLabel="test"
-            android:keyWidth="10%p"/>
+            android:keyOutputText="git add "
+            android:keyLabel="Add:" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="git push origin master"
+            android:keyLabel="Push to Origin/Master" />
+    </Row>
+    <Row>
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="git commit -m "
+            android:keyLabel="Commit: (message)" />
+        <Key
+            android:keyOutputText="git remove"
+            android:keyLabel="Remove" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="git push origin "
+            android:keyLabel="Push to Origin/: (branch)" />
+    </Row>
+    <Row>
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="git revert"
+            android:keyLabel="Revert" />
+        <Key
+            android:keyOutputText="git diff "
+            android:keyLabel="Diff between:" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="git branch "
+            android:keyLabel="Switch to branch:" />
     </Row>
 </Keyboard>

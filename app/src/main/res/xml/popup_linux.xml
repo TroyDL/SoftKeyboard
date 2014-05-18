@@ -2,20 +2,60 @@
 
 <Keyboard
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:keyWidth="10%p"
+    android:keyWidth="20%p"
     android:horizontalGap="0px"
     android:verticalGap="0px"
     android:keyHeight="30dip" >
-    <Row android:rowEdgeFlags="top|bottom" >
+    <Row android:rowEdgeFlags="top" >
         <Key
-            android:codes="46"
-            android:keyLabel="."
-            android:keyEdgeFlags="left" />
+            android:keyWidth="20%p"
+            android:keyOutputText="sudo apt-get update"
+            android:keyLabel="Apt-get Update" />
         <Key
-            android:codes="44"
-            android:keyLabel=","
-            android:keyEdgeFlags="right" />
-        <Key android:keyOutputText="test" android:keyLabel="test"
-            android:keyWidth="10%p"/>
+            android:keyOutputText="ls"
+            android:keyLabel="List" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="cp "
+            android:keyLabel="Copy:" />
+    </Row>
+    <Row>
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="sudo apt-get upgrade"
+            android:keyLabel="Apt-get Upgrade" />
+        <Key
+            android:keyOutputText="ls -a"
+            android:keyLabel="List All" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="mv "
+            android:keyLabel="Move:" />
+    </Row>
+    <Row>
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="sudo apt-get install "
+            android:keyLabel="Apt-get Install:" />
+        <Key
+            android:keyOutputText="ls -al"
+            android:keyLabel="List All (long)" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="rm -rf "
+            android:keyLabel="Remove (force,recurse):" />
+    </Row>
+    <Row android:rowEdgeFlags="bottom">
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="apt-cache search "
+            android:keyLabel="Apt-cache Search:" />
+        <Key
+            android:keyOutputText="ls ../ -a"
+            android:keyLabel="List Parent" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="ln -s "
+            android:keyLabel="Link Symbolically:" />
     </Row>
 </Keyboard>

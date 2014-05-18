@@ -2,20 +2,60 @@
 
 <Keyboard
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:keyWidth="10%p"
+    android:keyWidth="20%p"
     android:horizontalGap="0px"
     android:verticalGap="0px"
     android:keyHeight="30dip" >
-    <Row android:rowEdgeFlags="top|bottom" >
+    <Row android:rowEdgeFlags="top" >
         <Key
-            android:codes="46"
-            android:keyLabel="."
-            android:keyEdgeFlags="left" />
+            android:keyWidth="20%p"
+            android:keyOutputText="gg"
+            android:keyLabel="Go to Top" />
         <Key
-            android:codes="44"
-            android:keyLabel=","
-            android:keyEdgeFlags="right" />
-        <Key android:keyOutputText="test" android:keyLabel="test"
-            android:keyWidth="10%p"/>
+            android:keyOutputText="V y"
+            android:keyLabel="Copy line" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="dd"
+            android:keyLabel="Delete Line" />
+    </Row>
+    <Row>
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="G"
+            android:keyLabel="Go to Bottom" />
+        <Key
+            android:keyOutputText="p"
+            android:keyLabel="Paste Below" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="dt"
+            android:keyLabel="Delete until:" />
+    </Row>
+    <Row>
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText=":"
+            android:keyLabel="Go to Line #:" />
+        <Key
+            android:keyOutputText="P"
+            android:keyLabel="Paste Above" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText="ct"
+            android:keyLabel="Cut until:" />
+    </Row>
+    <Row>
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText=":w"
+            android:keyLabel="Write to File" />
+        <Key
+            android:keyOutputText=":wq"
+            android:keyLabel="Write and Quit" />
+        <Key
+            android:keyWidth="20%p"
+            android:keyOutputText=":e"
+            android:keyLabel="Refresh File" />
     </Row>
 </Keyboard>
