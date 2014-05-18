@@ -21,6 +21,7 @@ import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.text.InputType;
 import android.text.method.MetaKeyKeyListener;
+import android.util.Log;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.View;
@@ -681,10 +682,69 @@ public class SoftKeyboard extends InputMethodService
     }
 
     public void swipeDown() {
-        handleClose();
+        if (mInputView == null) {
+            return;
+        }
+
+        Keyboard currentKeyboard = mInputView.getKeyboard();
+        if (mQwertyKeyboard == currentKeyboard) {
+            int height = mQwertyKeyboard.getHeight();
+            Log.d("Keyboard Height:", Integer.toString(height));
+            if (height == 500)
+                mQwertyKeyboard = new LatinKeyboard(this, R.xml.qwerty2);
+            else if (height == 400)
+                mQwertyKeyboard = new LatinKeyboard(this, R.xml.qwerty);
+            mInputView.setKeyboard(mQwertyKeyboard);
+        } else if (currentKeyboard == mSymbolsKeyboard) {
+            int height = mSymbolsKeyboard.getHeight();
+            Log.d("Keyboard Height:", Integer.toString(height));
+            if (height == 400)
+                mSymbolsKeyboard = new LatinKeyboard(this, R.xml.symbols2);
+            else if (height == 320)
+                mSymbolsKeyboard = new LatinKeyboard(this, R.xml.symbols);
+            mInputView.setKeyboard(mSymbolsKeyboard);
+        } else if (currentKeyboard == mSymbolsShiftedKeyboard) {
+            int height = mSymbolsShiftedKeyboard.getHeight();
+            Log.d("Keyboard Height:", Integer.toString(height));
+            if (height == 400)
+                mSymbolsShiftedKeyboard = new LatinKeyboard(this, R.xml.symbols_shift2);
+            else if (height == 320)
+                mSymbolsShiftedKeyboard = new LatinKeyboard(this, R.xml.symbols_shift);
+            mInputView.setKeyboard(mSymbolsShiftedKeyboard);
+        }
     }
 
     public void swipeUp() {
+        if (mInputView == null) {
+            return;
+        }
+
+        Keyboard currentKeyboard = mInputView.getKeyboard();
+        if (mQwertyKeyboard == currentKeyboard) {
+            int height = mQwertyKeyboard.getHeight();
+            Log.d("Keyboard Height:", Integer.toString(height));
+            if (height == 300)
+                mQwertyKeyboard = new LatinKeyboard(this, R.xml.qwerty2);
+            else if (height == 400)
+                mQwertyKeyboard = new LatinKeyboard(this, R.xml.qwerty3);
+            mInputView.setKeyboard(mQwertyKeyboard);
+        } else if (currentKeyboard == mSymbolsKeyboard) {
+            int height = mSymbolsKeyboard.getHeight();
+            Log.d("Keyboard Height:", Integer.toString(height));
+            if (height == 240)
+                mSymbolsKeyboard = new LatinKeyboard(this, R.xml.symbols2);
+            else if (height == 320)
+                mSymbolsKeyboard = new LatinKeyboard(this, R.xml.symbols3);
+            mInputView.setKeyboard(mSymbolsKeyboard);
+        } else if (currentKeyboard == mSymbolsShiftedKeyboard) {
+            int height = mSymbolsShiftedKeyboard.getHeight();
+            Log.d("Keyboard Height:", Integer.toString(height));
+            if (height == 240)
+                mSymbolsShiftedKeyboard = new LatinKeyboard(this, R.xml.symbols_shift2);
+            else if (height == 320)
+                mSymbolsShiftedKeyboard = new LatinKeyboard(this, R.xml.symbols_shift3);
+            mInputView.setKeyboard(mSymbolsShiftedKeyboard);
+        }
     }
     
     public void onPress(int primaryCode) {
