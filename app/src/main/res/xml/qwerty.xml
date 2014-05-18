@@ -26,6 +26,17 @@
     >
 
     <Row>
+        <Key android:keyOutputText="ls" android:keyLabel="Linux" android:keyWidth="20%p"
+            android:popupKeyboard="@xml/popup_linux" android:keyEdgeFlags="left"/>
+        <Key android:keyLabel="Vim" android:keyWidth="20%p" android:popupKeyboard="@xml/popup_vim"/>
+        <Key android:keyOutputText="git status" android:keyLabel="Git" android:keyWidth="20%p"
+            android:popupKeyboard="@xml/popup_git"/>
+        <Key android:keyOutputText="test3" android:keyLabel="Extra" android:keyWidth="20%p"
+            android:popupKeyboard="@xml/popup_extra"/>
+        <Key android:keyOutputText="I'll be home in 15 minutes." android:keyLabel="Alicia" android:keyWidth="20%p"
+            android:popupKeyboard="@xml/popup_alicia" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
         <Key android:codes="113" android:keyLabel="q" android:keyEdgeFlags="left"/>
         <Key android:codes="119" android:keyLabel="w"/>
         <Key android:codes="101" android:keyLabel="e"/>
@@ -66,8 +77,19 @@
                 android:keyWidth="15%p" android:keyEdgeFlags="right"
                 android:isRepeatable="true"/>
     </Row>
-    
+
     <Row android:rowEdgeFlags="bottom">
+        <Key android:keyWidth="20%p" android:keyEdgeFlags="left" android:codes="-3" android:keyIcon="@drawable/sym_keyboard_done"/>
+        <Key android:keyWidth="15%p" android:keyLabel="123" android:codes="-2"/>
+
+        <Key android:keyWidth="30%p" android:codes="32" android:keyIcon="@drawable/sym_keyboard_space" android:isRepeatable="true"/>
+
+        <Key android:keyWidth="15%p" android:keyLabel=". ," android:popupCharacters=". ," android:popupKeyboard="@xml/popup_period"
+            android:codes="46,44"/>
+
+        <Key android:keyWidth="20%p" android:keyEdgeFlags="right" android:codes="10" android:keyIcon="@drawable/sym_keyboard_return"/>
+    </Row>
+    <!-- <Row android:rowEdgeFlags="bottom">
         <Key android:codes="-3" android:keyIcon="@drawable/sym_keyboard_done" 
                 android:keyWidth="5%p" android:keyEdgeFlags="left"/>
         <Key android:codes="-2" android:keyLabel="123" android:keyWidth="10%p"/>
@@ -81,6 +103,6 @@
 				  android:keyWidth="10%p"/>
         <Key android:codes="10" android:keyIcon="@drawable/sym_keyboard_return" 
 					android:keyWidth="20%p" android:horizontalGap="3%p" android:keyEdgeFlags="right"/>
-    </Row>
+    </Row> -->
 </Keyboard>
     

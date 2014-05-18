@@ -339,7 +339,8 @@ public class SoftKeyboard extends InputMethodService
         
         return true;
     }
-    
+
+    //@Override public boolean onKeyLongPress(int keyCode, KeyEvent event) { return true; }
     /**
      * Use this to monitor key events being delivered to the application.
      * We get first crack at them, and can either resume them or let them
